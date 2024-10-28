@@ -37,10 +37,6 @@ kotlin {
 	}
 }
 
-kotlinLombok {
-	lombokConfigurationFile(file("lombok.config"))
-}
-
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
