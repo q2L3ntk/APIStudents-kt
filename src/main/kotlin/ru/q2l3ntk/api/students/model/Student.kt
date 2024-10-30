@@ -14,7 +14,7 @@ class Student {
     private var lastName: String? = null
     @Contextual
     private var dateOfBirth: LocalDate? = null
-    private var email: String? = null
+    var email: String? = null
     private var age: Int? = null
 
     fun setFirstName(firstName: String?): Student {
