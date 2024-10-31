@@ -1,5 +1,6 @@
 package ru.q2l3ntk.api.students.repository
 
+import kotlinx.coroutines.flow.*
 import ru.q2l3ntk.api.students.model.Student
 
 class InMemoryStudentDAO {
@@ -14,10 +15,10 @@ class InMemoryStudentDAO {
         return student
     }
 
-    fun findByEmail(email: String): Student {
-        return STUDENTS.stream().filter { element -> element.email.equals(email) }
-            .findFirst()
-            .orElse(null)
+    suspend fun findByEmail(email: String): Student? {
+        var student = Student() ?: null
+        student = STUDENTS.asFlow().filter { students -> students.getEmail().equals(email) }.firstOrNull()
+        return student
     }
 
     fun updateStudent(student: Student): Student {
