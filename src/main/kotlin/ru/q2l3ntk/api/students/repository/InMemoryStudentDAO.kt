@@ -20,8 +20,14 @@ class InMemoryStudentDAO {
         return student
     }
 
-    fun updateStudent(student: Student): Student {
-        TODO("Not yet implemented")
+    suspend fun updateStudent(student: Student): Student? {
+        val studentsFound = STUDENTS.asFlow().filter { index -> Function STUDENTS.get(STUDENTS.size - 1).getEmail().equals(student.getEmail()) }.firstOrNull()
+
+        if (studentsFound != null) {
+            return studentsFound
+        }
+
+        return null
     }
 
     fun deleteStudent(email: String?) {
