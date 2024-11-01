@@ -25,6 +25,7 @@ class InMemoryStudentDAO {
 
         if (studentsFound != null) {
             STUDENTS.remove(studentsFound)
+            STUDENTS.add(student)
             return student
         }
 
