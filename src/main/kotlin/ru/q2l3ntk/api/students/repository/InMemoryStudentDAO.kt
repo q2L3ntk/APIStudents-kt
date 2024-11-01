@@ -21,7 +21,7 @@ class InMemoryStudentDAO {
     }
 
     suspend fun updateStudent(student: Student): Student? {
-        val studentsFound = STUDENTS.asFlow().filter { index -> Function STUDENTS.get(STUDENTS.size - 1).getEmail().equals(student.getEmail()) }.firstOrNull()
+        val studentsFound = STUDENTS.asFlow().filter { index -> STUDENTS.get(STUDENTS.size - 1).getEmail().equals(student.getEmail()) }.firstOrNull()
 
         if (studentsFound != null) {
             return studentsFound
