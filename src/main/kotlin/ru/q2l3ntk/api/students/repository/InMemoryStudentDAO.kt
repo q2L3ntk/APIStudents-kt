@@ -24,7 +24,8 @@ class InMemoryStudentDAO {
         val studentsFound = STUDENTS.asFlow().filter { index -> STUDENTS.get(STUDENTS.size - 1).getEmail().equals(student.getEmail()) }.firstOrNull()
 
         if (studentsFound != null) {
-            return studentsFound
+            STUDENTS.remove(studentsFound)
+            return student
         }
 
         return null
