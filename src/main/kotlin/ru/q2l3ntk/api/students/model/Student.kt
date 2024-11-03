@@ -37,8 +37,8 @@ class Student {
         return this
     }
 
-    fun getEmail(): Student {
-        return setEmail(this.email)
+    fun getEmail(): String? {
+        return this.email
     }
 
     fun setAge(age: Int?): Student {
