@@ -36,7 +36,11 @@ class InMemoryStudentDAO {
         return null
     }
 
-    fun deleteStudent(email: String?) {
-        TODO("Not yet implemented")
+    suspend fun deleteStudent(email: String) {
+        val student = findByEmail(email)
+
+        if (student != null) {
+            STUDENTS.remove(student)
+        }
     }
 }
