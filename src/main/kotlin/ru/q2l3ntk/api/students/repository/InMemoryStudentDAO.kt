@@ -1,9 +1,11 @@
 package ru.q2l3ntk.api.students.repository
 
 import kotlinx.coroutines.flow.*
+import org.springframework.stereotype.Repository
 import ru.q2l3ntk.api.students.model.Student
 import java.util.stream.IntStream
 
+@Repository
 class InMemoryStudentDAO {
     private var STUDENTS = mutableListOf<Student>()
 
