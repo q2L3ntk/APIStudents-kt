@@ -2,6 +2,7 @@ package ru.q2l3ntk.api.students.repository
 
 import kotlinx.coroutines.flow.*
 import ru.q2l3ntk.api.students.model.Student
+import java.util.stream.IntStream
 
 class InMemoryStudentDAO {
     private var STUDENTS = mutableListOf<Student>()
@@ -20,12 +21,15 @@ class InMemoryStudentDAO {
         return student
     }
 
-    suspend fun updateStudent(student: Student): Student? {
-        val studentsFound = STUDENTS.asFlow().filter { STUDENTS.get(STUDENTS.size - 1).getEmail().equals(student.getEmail()) }.firstOrNull()
+    fun updateStudent(student: Student): Student? {
+        // This index was found by IntStream and this is not recommended. There is a way to do it with coroutines
+        val studentIndex = IntStream.range(0, STUDENTS.size - 1)
+            .filter { index -> STUDENTS.get(index).getEmail().equals(student.getEmail()) }
+            .findFirst()
+            .orElse(-1)
 
-        if (studentsFound != null) {
-            STUDENTS.remove(studentsFound)
-            STUDENTS.add(student)
+        if (studentIndex > -1) {
+            STUDENTS.set(studentIndex, student)
             return student
         }
 
