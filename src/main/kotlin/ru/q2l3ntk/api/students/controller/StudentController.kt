@@ -1,9 +1,7 @@
 package ru.q2l3ntk.api.students.controller
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import ru.q2l3ntk.api.students.model.Student
 import ru.q2l3ntk.api.students.service.StudentService
 
@@ -16,5 +14,25 @@ class StudentController {
     @GetMapping
     fun findAllStudents(): List<Student> {
         return service.findAllStudents()
+    }
+
+    @PostMapping("save_student")
+    fun saveStudent(@RequestBody student: Student): Student {
+        return service.saveStudent(student)
+    }
+
+    @GetMapping("/{email}")
+    suspend fun findByEmail(@PathVariable email: String): Student? {
+        return service.findByEmail(email)
+    }
+
+    @PutMapping("update_student")
+    fun updateStudent(student: Student): Student? {
+        return service.updateStudent(student)
+    }
+
+    @DeleteMapping("delete_student/{email}")
+    suspend fun deleteStudent(@PathVariable email: String) {
+        service.deleteStudent(email)
     }
 }
