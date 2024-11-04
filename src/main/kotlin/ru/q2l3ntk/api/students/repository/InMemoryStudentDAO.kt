@@ -19,8 +19,7 @@ class InMemoryStudentDAO {
     }
 
     suspend fun findByEmail(email: String): Student? {
-        val student: Student? = STUDENTS.asFlow().filter { students -> students.getEmail().equals(email) }.firstOrNull()
-        return student
+        return STUDENTS.asFlow().filter { students -> students.getEmail().equals(email) }.firstOrNull()
     }
 
     fun updateStudent(student: Student): Student? {
