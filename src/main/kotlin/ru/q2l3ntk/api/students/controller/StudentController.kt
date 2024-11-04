@@ -17,8 +17,9 @@ class StudentController {
     }
 
     @PostMapping("save_student")
-    fun saveStudent(@RequestBody student: Student): Student {
-        return service.saveStudent(student)
+    fun saveStudent(@RequestBody student: Student): String {
+        service.saveStudent(student)
+        return "Student successfully saved"
     }
 
     @GetMapping("/{email}")
