@@ -27,7 +27,7 @@ class InMemoryStudentServiceImpl: StudentService {
         return repository.updateStudent(student)
     }
 
-    override suspend fun deleteStudent(email: String) {
+    override fun deleteStudent(email: String) {
         return repository.deleteStudent(email)
     }
 }
