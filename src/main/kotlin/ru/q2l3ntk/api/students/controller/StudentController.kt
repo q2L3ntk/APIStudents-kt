@@ -23,7 +23,7 @@ class StudentController {
     }
 
     @GetMapping("/{email}")
-    suspend fun findByEmail(@PathVariable email: String): Student? {
+    fun findByEmail(@PathVariable email: String): Student? {
         return service.findByEmail(email)
     }
 

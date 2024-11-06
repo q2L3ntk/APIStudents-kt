@@ -3,11 +3,12 @@ package ru.q2l3ntk.api.students.repository
 import kotlinx.coroutines.flow.*
 import org.springframework.stereotype.Repository
 import ru.q2l3ntk.api.students.model.Student
+import java.util.ArrayList
 import java.util.stream.IntStream
 
 @Repository
 class InMemoryStudentDAO {
-    private var STUDENTS = mutableListOf<Student>()
+    private var STUDENTS: MutableList<Student> = ArrayList()
 
     fun findAllStudents(): List<Student> {
         return STUDENTS
@@ -18,8 +19,11 @@ class InMemoryStudentDAO {
         return student
     }
 
-    suspend fun findByEmail(email: String): Student? {
-        return STUDENTS.asFlow().filter { students -> students.getEmail().equals(email) }.firstOrNull()
+    fun findByEmail(email: String): Student? {
+        return STUDENTS.stream()
+            .filter {element -> element.getEmail().equals(email)}
+            .findFirst()
+            .orElse(null);
     }
 
     fun updateStudent(student: Student): Student? {

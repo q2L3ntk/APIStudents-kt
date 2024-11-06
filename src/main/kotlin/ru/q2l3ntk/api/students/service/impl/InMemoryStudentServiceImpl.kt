@@ -19,7 +19,7 @@ class InMemoryStudentServiceImpl: StudentService {
         return repository.saveStudent(student)
     }
 
-    override suspend fun findByEmail(email: String): Student? {
+    override fun findByEmail(email: String): Student? {
         return repository.findByEmail(email)
     }
 
