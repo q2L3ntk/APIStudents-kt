@@ -1,6 +1,5 @@
 package ru.q2l3ntk.api.students.repository
 
-import kotlinx.coroutines.flow.*
 import org.springframework.stereotype.Repository
 import ru.q2l3ntk.api.students.model.Student
 import java.util.ArrayList
@@ -41,7 +40,7 @@ class InMemoryStudentDAO {
         return null
     }
 
-    suspend fun deleteStudent(email: String) {
+    fun deleteStudent(email: String) {
         val student = findByEmail(email)
 
         if (student != null) {
