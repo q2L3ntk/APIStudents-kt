@@ -19,7 +19,7 @@ class InMemoryStudentDAO {
     }
 
     fun findByEmail(email: String): Student? {
-        return STUDENTS.stream()
+        return STUDENTS.stream() // Dedicated kotlinx coroutines
             .filter {element -> element.getEmail().equals(email)}
             .findFirst()
             .orElse(null);
