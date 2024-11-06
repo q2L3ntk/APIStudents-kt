@@ -1,1 +1,1 @@
-![Logo](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdwglogo.com%2Fspring-framework%2F&psig=AOvVaw1H_m_pJmXZvEPeKZpGUDFM&ust=1730991908700000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjkx8H9x4kDFQAAAAAdAAAAABAd)
+(/doc/logo.png)
