@@ -1,1 +1,1 @@
-[/doc/logo.png]
+[Logo](/doc/logo.png)
