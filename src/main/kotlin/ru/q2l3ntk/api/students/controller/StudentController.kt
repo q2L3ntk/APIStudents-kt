@@ -33,7 +33,7 @@ class StudentController {
     }
 
     @DeleteMapping("delete_student/{email}")
-    suspend fun deleteStudent(@PathVariable email: String) {
+    fun deleteStudent(@PathVariable email: String) {
         service.deleteStudent(email)
     }
 }

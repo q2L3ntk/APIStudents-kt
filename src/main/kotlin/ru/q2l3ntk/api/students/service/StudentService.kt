@@ -7,5 +7,5 @@ interface StudentService {
     fun saveStudent(student: Student): Student
     fun findByEmail(email: String): Student?
     fun updateStudent(student: Student): Student?
-    suspend fun deleteStudent(email: String)
+    fun deleteStudent(email: String)
 }
