@@ -1,1 +1,1 @@
-![](/doc/logo.png)
+![](/doc/spring-3.svg)
