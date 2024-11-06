@@ -28,7 +28,7 @@ class StudentController {
     }
 
     @PutMapping("update_student")
-    fun updateStudent(student: Student): Student? {
+    fun updateStudent(@RequestBody student: Student): Student? {
         return service.updateStudent(student)
     }
 

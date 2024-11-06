@@ -27,7 +27,7 @@ class InMemoryStudentDAO {
 
     fun updateStudent(student: Student): Student? {
         // This index was found by IntStream and this is not recommended. There is a way to do it with coroutines
-        val studentIndex = IntStream.range(0, STUDENTS.size - 1)
+        var studentIndex = IntStream.range(0, STUDENTS.size - 1)
             .filter { index -> STUDENTS.get(index).getEmail().equals(student.getEmail()) }
             .findFirst()
             .orElse(-1)
