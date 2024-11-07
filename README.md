@@ -1,1 +1,1 @@
-![](/doc/icon.png) #Student application
+# ![](/doc/icon.png) Student application
