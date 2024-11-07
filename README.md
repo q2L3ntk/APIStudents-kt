@@ -11,7 +11,7 @@ The main data manipulation functions are found in the following parts of the URL
 - /api/v1/students/update_student - replaces an existing student with a new one
 - /api/v1/students/delete_student/{email} - removes existing student
 
-While checking this out in postman you should using this template:
+While checking this out in postman you should use this template:
 ```
 {
     "firstName": "firstName",
