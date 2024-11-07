@@ -22,4 +22,4 @@ While checking this out in postman you should using this template:
 }
 ```
 ## About
-This application was developed using Spring framework version 3.2.11 and using Kotlin language with Gradle project build system.
+This application was developed using Spring framework version 3.2.11 and using Kotlin language with Gradle project build system. Build and run with Java 21 JDK
