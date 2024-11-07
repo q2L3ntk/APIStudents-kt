@@ -5,11 +5,11 @@
 Application uses Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
 It implements the basic requests: GET, POST. PUT and DELETE. You can use postman to check this out.
 The main data manipulation functions are found in the following parts of the URL address:
-- api/v1/students - shows information about existing (or not) students in JSON format
-- api/v1/students/save_student - adds information (as an JSON) about a student
-- api/v1/students/{email} - finds a student by email and outputs in JSON format
-- api/v1/students/update_student - replaces an existing student with a new one
-- api/v1/students/delete_student/{email} - removes existing student
+- /api/v1/students - shows information about existing (or not) students in JSON format
+- /api/v1/students/save_student - adds information (as an JSON) about a student
+- /api/v1/students/{email} - finds a student by email and outputs in JSON format
+- /api/v1/students/update_student - replaces an existing student with a new one
+- /api/v1/students/delete_student/{email} - removes existing student
 
 While checking this out in postman you should using this template:
 ```
