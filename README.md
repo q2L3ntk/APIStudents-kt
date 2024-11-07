@@ -2,7 +2,7 @@
 ## Latest release 0.1.1
 - [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/InMemoryWithFix_1)
 ## How to use this (using memory)
-Application uses Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
+Application works on Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
 It implements the basic requests: GET, POST, PUT and DELETE. You can use postman to check this out.
 The main data manipulation functions are found in the following parts of the URL address:
 - /api/v1/students - shows information about existing (or not) students in JSON format
