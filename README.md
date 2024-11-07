@@ -1,5 +1,5 @@
 # ![](/doc/icon.png) Student application
-## Latest release 0.1.0
+## Latest release 0.1.1
 - [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/InMemoryWithFix_1)
 ## How to use this (using memory)
 Application uses Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
