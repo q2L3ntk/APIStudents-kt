@@ -1,1 +1,1 @@
-![](/doc/spring-3.svg)
+![](/doc/icon.png) #Student application
