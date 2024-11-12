@@ -1,6 +1,7 @@
 package ru.q2l3ntk.api.students.controller
 
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.web.bind.annotation.*
 import ru.q2l3ntk.api.students.model.Student
 import ru.q2l3ntk.api.students.service.StudentService
@@ -8,6 +9,7 @@ import ru.q2l3ntk.api.students.service.StudentService
 @RestController
 @RequestMapping("/api/v1/students")
 class StudentController {
+    @Qualifier("studentServiceImpl")
     @Autowired
     private lateinit var service: StudentService
 
