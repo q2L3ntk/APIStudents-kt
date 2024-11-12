@@ -1,16 +1,23 @@
 package ru.q2l3ntk.api.students.model
 
-import lombok.Builder
+import jakarta.persistence.*
 import lombok.Data
 import java.time.LocalDate
+import kotlin.jvm.Transient
 
 @Data
-@Builder
+@Entity
+@Table(name = "students")
 class Student {
+    @Id
+    @GeneratedValue
+    private var id: Long? = null
     private var firstName: String? = null
     private var lastName: String? = null
     private var dateOfBirth: LocalDate? = null
+    @Column(unique = true)
     private var email: String? = null
+    @Transient
     private var age: Int? = null
 
     fun getFirstName(): String? {
