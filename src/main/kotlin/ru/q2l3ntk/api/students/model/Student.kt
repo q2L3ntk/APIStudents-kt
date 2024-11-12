@@ -3,6 +3,7 @@ package ru.q2l3ntk.api.students.model
 import jakarta.persistence.*
 import lombok.Data
 import java.time.LocalDate
+import java.time.Period
 import kotlin.jvm.Transient
 
 @Data
@@ -21,22 +22,22 @@ class Student {
     private var age: Int? = null
 
     fun getFirstName(): String? {
-        return this.firstName
+        return firstName
     }
 
     fun getLastName(): String? {
-        return this.lastName
+        return lastName
     }
 
     fun getDateOfBirth(): LocalDate? {
-        return this.dateOfBirth
+        return dateOfBirth
     }
 
     fun getEmail(): String? {
-        return this.email
+        return email
     }
 
-    fun getAge(): Int? {
-        return this.age
+    fun getAge(): Int {
+        return Period.between(dateOfBirth, LocalDate.now()).years
     }
 }
