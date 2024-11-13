@@ -21,27 +21,15 @@ class Student {
     @Transient
     private var age: Int? = null
 
-    fun getId(): Long? {
-        return id
-    }
+    fun getId(): Long? = id
 
-    fun getFirstName(): String? {
-        return firstName
-    }
+    fun getFirstName(): String? = firstName
 
-    fun getLastName(): String? {
-        return lastName
-    }
+    fun getLastName(): String? = lastName
 
-    fun getDateOfBirth(): LocalDate? {
-        return dateOfBirth
-    }
+    fun getDateOfBirth(): LocalDate? = dateOfBirth
 
-    fun getEmail(): String? {
-        return email
-    }
+    fun getEmail(): String? = email
 
-    fun getAge(): Int {
-        return Period.between(dateOfBirth, LocalDate.now()).years
-    }
+    fun getAge(): Int = Period.between(dateOfBirth, LocalDate.now()).years
 }
