@@ -18,7 +18,6 @@ While checking this out in postman you should use this template:
     "lastName": "lastName",
     "dateOfBirth": "YYYY-MM-DD",
     "email": "email",
-    "age": 0
 }
 ```
 ## PostgreSQL
