@@ -1,7 +1,7 @@
 # ![](/doc/icon.png) Student application
-## Latest release 0.1.1
+## Latest release 0.1.2
 - [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/InMemoryWithFix_1)
-## How to use this (using memory)
+## How to use this
 Application works on Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
 It implements the basic requests: GET, POST, PUT and DELETE. You can use postman to check this out.
 The main data manipulation functions are found in the following parts of the URL address:
@@ -20,6 +20,17 @@ While checking this out in postman you should use this template:
     "email": "email",
     "age": 0
 }
+```
+## PostgreSQL
+Using database allows you to store data outside of the application's running time.
+Database connection described in application.yml:
+```
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/student_db
+    username: postgres
+    password: renameme
+    driver-class-name: org.postgresql.Driver
 ```
 ## About
 This application was developed using Spring framework version 3.2.11 and using Kotlin language with Gradle project build system. Build and run with Java 21 JDK
