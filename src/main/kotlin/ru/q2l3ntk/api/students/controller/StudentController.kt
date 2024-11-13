@@ -2,6 +2,7 @@ package ru.q2l3ntk.api.students.controller
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Qualifier
+import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.*
 import ru.q2l3ntk.api.students.model.Student
 import ru.q2l3ntk.api.students.service.StudentService
@@ -35,6 +36,7 @@ class StudentController {
     }
 
     @DeleteMapping("delete_student/{email}")
+    @Transactional
     fun deleteStudent(@PathVariable email: String) {
         service.deleteStudent(email)
     }

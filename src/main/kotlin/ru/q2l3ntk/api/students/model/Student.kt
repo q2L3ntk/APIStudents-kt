@@ -21,6 +21,10 @@ class Student {
     @Transient
     private var age: Int? = null
 
+    fun getId(): Long? {
+        return id
+    }
+
     fun getFirstName(): String? {
         return firstName
     }
