@@ -1,5 +1,9 @@
 package ru.q2l3ntk.api.students.repository
 
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.runBlocking
 import org.springframework.stereotype.Repository
 import ru.q2l3ntk.api.students.model.Student
 import java.util.ArrayList
@@ -18,11 +22,8 @@ class InMemoryStudentDAO {
         return student
     }
 
-    fun findByEmail(email: String): Student? {
-        return STUDENTS.stream() // Dedicated kotlinx coroutines
-            .filter {element -> element.getEmail().equals(email)}
-            .findFirst()
-            .orElse(null);
+    fun findByEmail(email:String) = runBlocking {
+        return@runBlocking STUDENTS.asFlow().filter { element -> element.getEmail().equals(email) }.firstOrNull()
     }
 
     fun updateStudent(student: Student): Student? {
