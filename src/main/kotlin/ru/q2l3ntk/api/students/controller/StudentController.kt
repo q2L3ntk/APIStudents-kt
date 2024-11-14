@@ -11,7 +11,7 @@ import ru.q2l3ntk.api.students.service.StudentService
 @RequestMapping("/api/v1/students")
 class StudentController {
     @Qualifier("studentServiceImpl")
-    @Autowired
+    @Autowired //Outdated
     private lateinit var service: StudentService
 
     @GetMapping
