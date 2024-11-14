@@ -22,7 +22,7 @@ class InMemoryStudentDAO {
         return student
     }
 
-    fun findByEmail(email:String) = runBlocking {
+    fun findByEmail(email: String) = runBlocking {
         return@runBlocking STUDENTS.asFlow().filter { element -> element.getEmail().equals(email) }.firstOrNull()
     }
 
