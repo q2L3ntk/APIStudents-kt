@@ -7,7 +7,7 @@ import ru.q2l3ntk.api.students.model.Student
 
 @Repository
 class InMemoryStudentDAO {
-    private var STUDENTS = mutableListOf<Student>()
+    private val STUDENTS = mutableListOf<Student>()
 
     fun findAllStudents(): List<Student> {
         return STUDENTS
