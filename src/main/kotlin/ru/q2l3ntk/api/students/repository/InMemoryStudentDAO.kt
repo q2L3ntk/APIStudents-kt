@@ -4,11 +4,10 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.runBlocking
 import org.springframework.stereotype.Repository
 import ru.q2l3ntk.api.students.model.Student
-import java.util.ArrayList
 
 @Repository
 class InMemoryStudentDAO {
-    private var STUDENTS: MutableList<Student> = ArrayList()
+    private var STUDENTS = mutableListOf<Student>()
 
     fun findAllStudents(): List<Student> {
         return STUDENTS
