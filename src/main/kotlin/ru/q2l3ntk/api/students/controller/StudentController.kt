@@ -15,9 +15,7 @@ class StudentController {
     private lateinit var service: StudentService
 
     @GetMapping
-    fun findAllStudents(): List<Student> {
-        return service.findAllStudents()
-    }
+    fun findAllStudents(): List<Student> = service.findAllStudents()
 
     @PostMapping("save_student")
     fun saveStudent(@RequestBody student: Student): String {
@@ -26,18 +24,12 @@ class StudentController {
     }
 
     @GetMapping("/{email}")
-    fun findByEmail(@PathVariable email: String): Student? {
-        return service.findByEmail(email)
-    }
+    fun findByEmail(@PathVariable email: String): Student? = service.findByEmail(email)
 
     @PutMapping("update_student")
-    fun updateStudent(@RequestBody student: Student): Student? {
-        return service.updateStudent(student)
-    }
+    fun updateStudent(@RequestBody student: Student): Student? = service.updateStudent(student)
 
     @DeleteMapping("delete_student/{email}")
     @Transactional
-    fun deleteStudent(@PathVariable email: String) {
-        service.deleteStudent(email)
-    }
+    fun deleteStudent(@PathVariable email: String) { service.deleteStudent(email) }
 }

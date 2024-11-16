@@ -11,23 +11,13 @@ class StudentServiceImpl: StudentService {
     @Autowired
     private lateinit var repository: StudentRepository
 
-    override fun findAllStudents(): List<Student> {
-        return repository.findAll()
-    }
+    override fun findAllStudents(): List<Student> = repository.findAll()
 
-    override fun saveStudent(student: Student): Student {
-        return repository.save(student)
-    }
+    override fun saveStudent(student: Student): Student = repository.save(student)
 
-    override fun findByEmail(email: String): Student? {
-        return repository.findStudentByEmail(email)
-    }
+    override fun findByEmail(email: String): Student? = repository.findStudentByEmail(email)
 
-    override fun updateStudent(student: Student): Student? {
-        return repository.save(student)
-    }
+    override fun updateStudent(student: Student): Student? = repository.save(student)
 
-    override fun deleteStudent(email: String) {
-        repository.deleteByEmail(email)
-    }
+    override fun deleteStudent(email: String) { repository.deleteByEmail(email) }
 }

@@ -11,23 +11,13 @@ class InMemoryStudentServiceImpl: StudentService {
     @Autowired
     private lateinit var repository: InMemoryStudentDAO
 
-    override fun findAllStudents(): List<Student> {
-        return repository.findAllStudents()
-    }
+    override fun findAllStudents(): List<Student> = repository.findAllStudents()
 
-    override fun saveStudent(student: Student): Student {
-        return repository.saveStudent(student)
-    }
+    override fun saveStudent(student: Student): Student = repository.saveStudent(student)
 
-    override fun findByEmail(email: String): Student? {
-        return repository.findByEmail(email)
-    }
+    override fun findByEmail(email: String): Student? = repository.findByEmail(email)
 
-    override fun updateStudent(student: Student): Student? {
-        return repository.updateStudent(student)
-    }
+    override fun updateStudent(student: Student): Student? = repository.updateStudent(student)
 
-    override fun deleteStudent(email: String) {
-        return repository.deleteStudent(email)
-    }
+    override fun deleteStudent(email: String) = repository.deleteStudent(email)
 }

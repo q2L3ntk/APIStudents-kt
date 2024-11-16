@@ -9,9 +9,7 @@ import ru.q2l3ntk.api.students.model.Student
 class InMemoryStudentDAO {
     private val STUDENTS = mutableListOf<Student>()
 
-    fun findAllStudents(): List<Student> {
-        return STUDENTS
-    }
+    fun findAllStudents(): List<Student> = STUDENTS
 
     fun saveStudent(student: Student): Student {
         STUDENTS.add(student)
