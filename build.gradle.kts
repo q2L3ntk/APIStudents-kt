@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "ru.q2l3ntk.api"
-version = "0.0.1-SNAPSHOT"
+version = "0.1.4-SNAPSHOT"
 
 java {
 	toolchain {
@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
