@@ -1,5 +1,5 @@
 # ![](/doc/icon.png) Student application
-## Latest release 0.1.3
+## Latest release v0.2.1
 - [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/Security)
 ## How to use this
 Application works on Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
