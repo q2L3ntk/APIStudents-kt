@@ -1,6 +1,6 @@
 # ![](/doc/icon.png) Student application
 ## Latest release 0.1.3
-- [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/StreamRemake)
+- [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/Security)
 ## How to use this
 Application works on Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
 It implements the basic requests: GET, POST, PUT and DELETE. You can use postman to check this out.
@@ -20,6 +20,8 @@ While checking this out in postman you should use this template:
     "email": "email",
 }
 ```
+## Security
+Since version 0.2.1, only certain authorized users can manipulate student data. Regular users can only view student information. The application is protected from csrf and other attacks.
 ## PostgreSQL
 Using database allows you to store data outside of the application's running time.
 Database connection described in application.yml:
