@@ -27,10 +27,14 @@ class SecurityConfig {
     }
 
     @Bean
-    fun formFilterChain(http: HttpSecurity): SecurityFilterChain {
+    fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http {
             csrf { disable() }
-            authorizeHttpRequests { authorize(anyRequest, authenticated) }
+            authorizeHttpRequests {
+                authorize("/api/v1/students", permitAll)
+                authorize("/api/v1/students/{email}", permitAll)
+                authorize("/api/v1/students/**", authenticated)
+            }
             formLogin { }
         }
 
