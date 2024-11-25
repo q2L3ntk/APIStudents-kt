@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import ru.q2l3ntk.api.students.model.Student
 import ru.q2l3ntk.api.students.repository.InMemoryStudentDAO
-import ru.q2l3ntk.api.students.service.StudentService
+import ru.q2l3ntk.api.students.service.AppService
 
 @Service
-class InMemoryStudentServiceImpl: StudentService {
+class InMemoryAppServiceImpl: AppService {
     @Autowired
     private lateinit var repository: InMemoryStudentDAO
 
