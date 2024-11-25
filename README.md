@@ -1,6 +1,6 @@
 # ![](/doc/icon.png) Student application
 > [!WARNING]
-> This repository is dedicated. I developed it as prototype fpr a larger project. For more recent releases, see NMAPICore.
+> This repository is dedicated. I developed it as prototype for a larger project. For more recent releases, see NMAPICore.
 ## Latest release v0.2.2
 - [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/Dedicated)
 ## How to use this
