@@ -6,13 +6,11 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.invoke
-import org.springframework.security.core.userdetails.User
-import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder
-import org.springframework.security.provisioning.InMemoryUserDetailsManager
 import org.springframework.security.web.SecurityFilterChain
+import ru.q2l3ntk.api.students.service.CommonUserDetailsService
 
 @Configuration
 @EnableWebSecurity
@@ -20,10 +18,7 @@ import org.springframework.security.web.SecurityFilterChain
 class SecurityConfig {
     @Bean
     fun userDetailsService(encoder: PasswordEncoder): UserDetailsService {
-        val admin: UserDetails = User.builder().username("admin").password(encoder.encode("admin")).roles("ADMIN").build()
-        val user: UserDetails = User.builder().username("user").password(encoder.encode("user")).roles("USER").build()
-
-        return InMemoryUserDetailsManager(admin, user)
+        return CommonUserDetailsService()
     }
 
     @Bean
