@@ -1,6 +1,8 @@
 # ![](/doc/icon.png) Student application
-## Latest release v0.2.1
-- [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/Security)
+> [!WARNING]
+> This repository is dedicated. I developed it as prototype for a larger project. For more recent releases, see NMAPICore.
+## Latest release v0.2.2
+- [Download](https://github.com/q2L3ntk/APIStudents-kt/releases/tag/Dedicated)
 ## How to use this
 Application works on Tomcat and can be accessed via the URL adress http://localhost:8080. If you did everything correctly you will see the plug page.
 It implements the basic requests: GET, POST, PUT and DELETE. You can use postman to check this out.
