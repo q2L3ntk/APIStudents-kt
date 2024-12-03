@@ -1,6 +1,6 @@
 # ![](/doc/icon.png) Student application
 > [!WARNING]
-> This repository is dedicated. I developed it as prototype for a larger project. For more recent releases, see NMAPICore.
+> This repository is dedicated. I developed it as prototype for a larger project. For more recent releases, see [NMAPICore](https://github.com/q2L3ntk/NMAPICore).
 ## Latest release v0.2.2-2
 - [Download](https://github.com/q2L3ntk/prototype/releases/tag/Dedicated-2)
 ## How to use this
