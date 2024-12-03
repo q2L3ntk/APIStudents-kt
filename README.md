@@ -23,7 +23,7 @@ While checking this out in postman you should use this template:
 }
 ```
 ## Security
-Since version 0.2.1, only certain authorized users can manipulate student data. Regular users can only view student information. The application is protected from csrf and other attacks.
+Since version 0.2.1, only certain authorized users can manipulate student data. The application is protected from csrf and other attacks.
 ## PostgreSQL
 Using database allows you to store data outside of the application's running time.
 Database connection described in application.yml:
